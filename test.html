@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        /* Стили для модального окна */
+        #modal {
+            display: none; /* по умолчанию модальное окно скрыто */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4); /* полупрозрачный фон */
+            padding-top: 100px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Тест по физической культуре</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="theory.html">Теория</a></li>
+                <li><a href="exercises.html">Упражнения</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Пройдите тест</h2>
+        <form id="test-form">
+            <p>1. Сколько минут должна длиться разминка?</p>
+            <input type="radio" name="q1" value="a"> 5-10 минут<br>
+            <input type="radio" name="q1" value="b"> 15-20 минут<br>
+            
+            <p>2. Какие мышцы работают при отжиманиях?</p>
+            <input type="radio" name="q2" value="a"> Грудные и трицепс<br>
+            <input type="radio" name="q2" value="b"> Квадрицепс и икры<br>
+            
+            <p>3. Что важно при выполнении приседаний?</p>
+            <input type="radio" name="q3" value="a"> Прямая спина<br>
+            <input type="radio" name="q3" value="b"> Глубокий наклон вперед<br>
+            
+            <p>4. Какое упражнение укрепляет кор?</p>
+            <input type="radio" name="q4" value="a"> Планка<br>
+            <input type="radio" name="q4" value="b"> Прыжки<br>
+            
+            <p>5. Какое упражнение развивает взрывную силу?</p>
+            <input type="radio" name="q5" value="a"> Прыжки<br>
+            <input type="radio" name="q5" value="b"> Планка<br>
+            
+            <p>6. Сколько раз в неделю рекомендуется тренироваться?</p>
+            <input type="radio" name="q6" value="a"> 3-5 раз<br>
+            <input type="radio" name="q6" value="b"> 1 раз в месяц<br>
+            
+            <p>7. Какое упражнение помогает развить выносливость?</p>
+            <input type="radio" name="q7" value="a"> Бег и прыжки<br>
+            <input type="radio" name="q7" value="b"> Планка и жим лёжа<br>
+            
+            <button type="submit">Отправить</button>
+        </form>
+        
+        <!-- Модальное окно для результата -->
+        <div id="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="test-result"></p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Веб-учебник по физической культуре</p>
+    </footer>
+</body>
+</html>
